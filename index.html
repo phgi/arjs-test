@@ -7,6 +7,13 @@
   </head>
   <body>
   <a-scene embedded arjs='sourceType: webcam;'>
+      <a-entity camera></a-entity>
+      <a-assets>
+          <a-asset-item id="tree-obj" src="object.obj"></a-asset-item>
+      </a-assets>
+      <a-marker type='pattern' url='pattern-marker.patt'>
+        <a-entity obj-model="obj: #tree-obj;" scale="0.5 0.5 0.5" color="#4CC3D9"></a-entity>
+      </a-marker>
   </a-scene>
   </body>
 </html>
